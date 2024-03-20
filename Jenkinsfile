@@ -15,6 +15,7 @@ pipeline {
         
         stage('Deploy'){
             steps{
+                echo "Selected choice: ${params.DeploymentTypet }"
                 sh "docker-compose down && docker-compose up -d"
             }
         }
